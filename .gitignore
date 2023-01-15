@@ -1,2 +1,4 @@
 secrets.sh
 terraform.tfstate*
+.terraform.lock.hcl
+.terraform/
