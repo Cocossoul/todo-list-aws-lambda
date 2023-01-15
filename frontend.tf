@@ -1,16 +1,3 @@
-terraform {
-  required_providers {
-    aws = {
-      source  = "hashicorp/aws"
-      version = "~> 4.0"
-    }
-  }
-}
-
-provider "aws" {
-  region = "eu-west-3"
-}
-
 resource "aws_s3_bucket" "todo_list" {
   bucket = "todo-list-www-bucket"
 }
@@ -53,3 +40,4 @@ resource "aws_s3_object" "todo_list_script" {
   source = "./www/script.js"
   etag = filemd5("./www/script.js")
 }
+
